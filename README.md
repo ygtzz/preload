@@ -1,4 +1,4 @@
-# LazyLoad
+# PreLoad
 
 a component to preload images
 
@@ -9,7 +9,7 @@ npm i my-preload -S
 
 ## Usage
 ```html
-<img src="images/defalut.png" data-src="images/real.jpg" data-defer="5000"/>
+<img src="images/real.png" data-pre="images/real.jpg" />
 ```
 ```javascript
 import {PreLoad} from 'my-preload';
