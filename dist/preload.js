@@ -93,18 +93,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function PreLoad(opts) {
     opts = (0, _objectAssign2.default)({
-        imgSelector: 'img[data-pre]',
-        imgAttr: 'data-pre',
+        preSelector: '[data-pre]',
+        preAttr: 'data-pre',
         callback: null
     }, opts);
 
     this.opts = opts;
 
-    if (opts.imgSelector) {
-        var images = document.querySelectorAll(opts.imgSelector);
-        if (images && images.length > 0) {
-            this._fPreLoad(Array.prototype.slice.call(images).map(function (item) {
-                return item.getAttribute(opts.imgAttr);
+    if (opts.preSelector) {
+        var preDoms = document.querySelectorAll(opts.preSelector);
+        if (preDoms && preDoms.length > 0) {
+            this._fPreLoad(Array.prototype.slice.call(preDoms).map(function (item) {
+                return item.getAttribute(opts.preAttr);
             }));
         }
     }

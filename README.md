@@ -9,12 +9,12 @@ npm i my-preload -S
 
 ## Usage
 ```html
-<img src="images/real.png" data-pre="images/real.jpg" />
+<div data-pre="images/preload.jpg"></div>
 ```
 ```javascript
 import {PreLoad} from 'my-preload';
 
-var pre = new PreLoad({imgSelector:'img[data-pre]'});
+var pre = new PreLoad({preSelector:'[data-pre]'});
 pre.preload([
     './images/4.jpg',
     './images/5.jpg',
@@ -26,8 +26,8 @@ pre.preload([
 
 Parameter | Type |Default| Description
 --------- | ---- | ------|-----------
-data-pre    | `string` |  | image's attr to store pre url 
-imgSelector | `string` | img[data-pre] | the images selector, used in document.querySelectorAll
+data-pre    | `string` |  | dom element's attr to store pre url 
+preSelector | `string` | [data-pre] | the dom's selector to preload image use data-pre attribute, used in document.querySelectorAll
 callback(img) | `function` | null | function to call after image loaded, parameter is the image object
 
 

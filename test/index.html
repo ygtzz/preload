@@ -13,6 +13,8 @@
         .horizontal{overflow: hidden;}
         .horizontal *{float:left;margin-left:50px;}
         .horizontal :first-child{margin-left:0;}
+        .pre7{background:url('./images/7.jpg') no-repeat top left;width:400px;height:300px;}
+        .pre8{background:url('./images/8.jpg') no-repeat top left;width:400px;height:300px;}        
     </style>
 </head>
 <body>
@@ -21,19 +23,19 @@
         <img src="" data-src="./images/1.jpg" alt="">
         <img src="" data-src="./images/2.jpg" alt="">
         <img src="" data-src="./images/3.jpg" alt="">
-    </div>
+    </img>
     <div class="imgc">
         <img src="" data-src="./images/4.jpg" alt="">
         <img src="" data-src="./images/5.jpg" alt="">
         <img src="" data-src="./images/6.jpg" alt="">
     </div>
     <div class="imgc horizontal">
-        <img src="" data-pre="./images/7.jpg" alt="">
-        <img src="" data-pre="./images/8.jpg" data-defer="3000" alt="">
+        <div class="pre7" data-pre="./images/7.jpg"></div>
+        <div class="pre8" data-pre="./images/8.jpg"></div>
     </div>
     <script src="../dist/preload.js"></script>
     <script>
-        var pre = new PreLoad({imgSelector:'img[data-pre]'});
+        var pre = new PreLoad({preSelector:'[data-pre]'});
         pre.preload([
             './images/4.jpg',
             './images/5.jpg',
